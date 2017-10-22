@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BMI</title>
+  <script>
+    window.onload = function(){
+      document.getElementById('button').onclick = function(){
+        var h= document.getElementById('height').value;
+        var w= document.getElementById('weight').value;
+        var bmi = document.getElementById('bmi');
+
+        bmi.innerHTML = (w/(h*0.01)/(h*0.01)).toFixed(1);
+      }
+    }
+  </script>
+</head>
+<body>
+  <p>身長<input type="number" id="height"> cm</p>
+  <p>体重<input type="number" id="weight"> kg</p>
+  <p>あなたのBMIは<output id="bmi">?</output>です。</p>
+  <input type="button" id="button" value="計算">
+</body>
+</html>
