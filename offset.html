@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  window.onload = function(){
+      document.getElementById("mycanvas").onclick = function(event){
+        var ix = event.offsetX;
+        var iy = event.offsetY;
+        document.getElementById("xc").innerHTML = ix;
+        document.getElementById("yc").innerHTML = iy;
+      };
+    }
+
+  </script>
+  <style>
+    #mycanvas {border:1px solid gray;}
+  </style>
+</head>
+<body>
+  <canvas id="mycanvas" width="800" height="640"></canvas>
+  <div>zahyou(<span id="xc"></span>,<span id="yc"></span>)</div>
+</body>
+</html>

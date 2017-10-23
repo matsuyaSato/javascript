@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>血圧判定</title>
+  <script>
+    window.onload = function(){
+      document.getElementById('button').onclick = function(){
+        var hp = parseFloat(document.getElementById('highpressure').value);
+        var lp = parseFloat(document.getElementById('lowpressure').value);
+        var judgement = document.getElementById('judgement');
+        if (hp <130 && lp<85){
+          judgement.innerHTML = "正常です。";
+        } else if (hp<140 && lp<90) {
+          judgement.innerHTML = "正常高血圧";
+        } else {
+          judgement.innerHTML = "高血圧";
+        }
+      };
+    };
+  </script>
+</head>
+<body>
+  <p>最高血圧:<input type="number" id="highpressure"></p>
+  <p>最低血圧:<input type="number" id="lowpressure"></p>
+  <p id="judgement">判定結果</p>
+  <input type="button" id="button" value="判定">
+</body>
+</html>
