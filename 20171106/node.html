@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>top</title>
+</head>
+<body>
+  <div id="first">
+    div1
+    <p>test1</p>
+    <p>test2</p>
+    <p>test3</p>
+  </div>
+  <div id="second">div2</div>
+  <div id="third">div3</div>
+  <p>test1</p>
+  <p>test2</p>
+  <p>test3</p>
+  <script>
+    var element = document.getElementById("first");
+    var element2 = element.getElementsByTagName("p");
+    element2[2].innerHTML = "変更";
+  </script>
+</body>
+</html>

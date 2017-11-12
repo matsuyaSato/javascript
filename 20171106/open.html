@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>top</title>
+    <script>
+      window.onload = function(){
+        var w;
+        document.getElementById("open").onclick = function(){
+          w = open("newpage.html", "new page", "width=400, height=300");
+          w.resizeTo(200,150);
+        };
+        document.getElementById("scroll").onclick = function(){
+          w.scrollBy(0,100);
+        }
+        document.getElementById("color").onclick = function(){
+          w.document.body.style.backgroundColor = "green";
+        }
+        document.getElementById("close").onclick = function(){
+          if(w) w.close();
+        };
+      };
+    </script>
+</head>
+<body>
+  <p>
+    <input type="button" value="open" id="open">
+    <input type="button" value="scroll" id="scroll">
+    <input type="button" value="colof" id="color">
+    <input type="button" value="close" id="close">
+  </p>
+</body>
+</html>

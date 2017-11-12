@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>キャンセル</title>
+  <script>
+  window.onload = function(){
+    var anchor = document.getElementById("anchor");
+    anchor.addEventListener("click",function(e){
+      if(!confirm("ページを移動してよろしいですか")) e.preventDefault();
+    },false);
+  }
+  </script>
+</head>
+<body>
+  <a id="anchor" href="http://yahoo.co.jp">yahoo</a>
+</body>
+</html>

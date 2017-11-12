@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>top</title>
+    <script>
+      function smoothScroll(id,durationTime){
+        var TIME_INTERVAL=30;
+        var element = document.getElementById(id);
+        if(!element) return;
+        var ey = element.getBoundingClientRect().top;
+        var dy = ey*TIME_INTERVAL/durationTime;
+        var  direction = dy>0 ? 1:-1;
+        var timer = setInterval(function(){
+          scrollBy(0,dy); ey -= dy;
+          if(direction*ey <= 0 ) clearInterval(timer);
+        }, TIME_INTERVAL);
+      }
+    </script>
+</head>
+<body>
+  <p>
+    <input type="button" value="open" id="open" onclick="smoothScroll('test',1000)">
+    <input type="button" value="scroll" id="scroll">
+    <input type="button" value="colof" id="color">
+    <input type="button" value="close" id="close">
+
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1>test</h1>
+    <h1 id="test">test</h1>
+
+  </p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>keybord</title>
+  <script>
+    function Person(name){
+      this.name = name;
+    };
+    Person.prototype.sayHello = function(){
+      console.log("Hello! "  + this.name);
+    }
+    var person = new Person("Tom");
+    window.onload = function(){
+      var button = document.getElementById("button");
+      button.addEventListener("click", person.sayHello.bind(person), false);
+    }
+  </script>
+</head>
+<body>
+  <input type="button" id="button" value="コンソール">
+</body>
+</html>

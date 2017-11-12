@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>painter</title>
+
+  <script>
+  window.onload = function(){
+        var box = document.getElementById("box");
+        box.addEventListener("mousedown",function(e){
+          var rect = box.getBoundingClientRect();
+          console.log(e.offsetX);
+          console.log("client; " + e.clientX);
+          console.log("絶対;" + rect.left);
+        })
+  };
+
+
+  </script>
+</head>
+<body>
+  <div id="box" style="padding:50px; background-color: blue;">box</div>
+</body>
+</html>

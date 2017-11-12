@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>top</title>
+</head>
+<body>
+  <ul id="doglist">
+    <li>ポメラニアン</li>
+    <li>ダルメシアン</li>
+  </ul>
+  <script>
+  var doglist = document.getElementById("doglist");
+  var element = document.createElement("li");
+  var text = document.createTextNode("ブルドッグ");
+  doglist.appendChild(element);
+  element.appendChild(text);
+  </script>
+</body>
+</html>
