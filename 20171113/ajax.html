@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>血圧判定</title>
+  <script>
+    window.onload = function(){
+      var req = new XMLHttpRequest();
+      req.onreadystatechange = function(){
+        if(req.readyState == 4){
+          if(req.status == 200){
+            document.getElementById("view").innerHTML = req.responseText;
+          }
+        }
+      };
+      req.addEventListener("loadstart", function(){
+        document.getElementById("view").innerHTML = "通信中";
+      },false);
+      req.open("GET", "data.txt");
+      req.send(null);
+    };
+  </script>
+</head>
+<body>
+  <p id="view"></p>
+</body>
+</html>
